@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+            // TODO: Add code to check answers to questions
+            <script>
+                document.addEventListener('DOMContentLoaded', function()
+                {
+                    let incorrect = document.querySelectorAll('.incorrect');
+                    for(let i = 0; i < incorrect.length; i++)
+                    {
+                        incorrect[i].addEventListener('click', function()
+                            {
+                            incorrect[i].style.backgroundColor = "red";
+                            document.querySelector('#feedback1').innerHTML = 'Incorrect';
+                            });
+                    }
+
+                    let correct = document.querySelector('.correct');
+                    correct.addEventListener('click', function()
+                    {
+                        correct.style.backgroundColor = "green";
+                        document.querySelector('#feedback1').innerHTML = 'Correct!';
+                    });
+
+                    document.querySelector('#check').addEventListener('click', function(){
+                        let anwser = document.querySelector('input');
+                        if(anwser.value == 'mercury')
+                        {
+                            document.querySelector('#feedback2').innerHTML = 'Correct';
+                            anwser.style.color = 'green';
+                        }
+                        else
+                        {
+                            document.querySelector('#feedback2').innerHTML = 'Incorrect';
+                            anwser.style.color = 'red';
+                        }
+                    });
+                });
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which was the first country to use paper money?</h3>
+                <button class = "incorrect"> England </button>
+                <button class = "incorrect"> Japan </button>
+                <button class = "correct"> China </button>
+                <button class = "incorrect"> Spain </button>
+                <p id = "feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Hg is the chemical symbol of which element?</h3>
+                    <input type = "text" autocomplete = 'off'></input>
+                    <button id = "check">Check Anwser</button>
+                    <p id = "feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>
