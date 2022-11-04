@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block main %}
+<h1 class="text-primary" style="text-align:center, padding:100px">Transaction History</h1>
+<table class="table table-light table-striped table-hover">
+    <thead class="table-warning">
+    <tr>
+        <th>Symbol</th>
+        <th>Company</th>
+        <th>Type</th>
+        <th>Transaction Price</th>
+        <th>Current Stock Price</th>
+        <th>Date & Time(UTC)</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in range(x) %}
+        <tr>
+            <td>{{ transactions[i]['symbol'] }}</td>
+            <td>{{ transactions[i]['name'] }}</td>
+            <td>{{ transactions[i]['type'] }}</td>
+            <td>{{ transactions[i]['total_cost'] | usd }}</td>
+            <td>{{ transactions[i]['price'] | usd }}</td>
+            <td>{{ transactions[i]['datetime'] }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

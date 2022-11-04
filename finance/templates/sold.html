@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Sell
+{% endblock %}
+
+{% block main %}
+
+<form action="/sell" method="POST" class="form-inline well">
+    <div class="mb-3">
+        <select name="symbol">
+            {% for i in range(x) %}
+                <option value="{{ portfolio[i]['symbol'] }}">{{ portfolio[i]['symbol'] }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <input name="shares" autofocus class="form-control mx-auto w-auto" autocomplete="off" type="int" placeholder="Number of Shares">
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-primary" type="submit" style="padding:1 rem;">Sell</button>
+    </div>
+</form>
+
+
+{% endblock %}

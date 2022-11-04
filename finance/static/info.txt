@@ -1,0 +1,2 @@
+export API_KEY=pk_1f2cd719e37a4ccc947c9d1b05ccd516
+account info Username = testpilot1, Password = fly365
