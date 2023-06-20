@@ -3,7 +3,7 @@ My code for assignments and projects for cs50's introduction to computer science
 Below I go through week by week and describe what was taught and what programs were written to practice what was taught.
 
 Week 0 and 1: 
-This was the basic's of C programming. Loops, printing, variables. 
+This was the basic's of C programming. Loops, printing, variables.\n
 pset0/pset1
 
 Week 2:
