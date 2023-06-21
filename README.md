@@ -37,10 +37,6 @@ Internet protocols, HTML, CSS, JavaScript.
 Flask, connecting front-end to back-end to database. 
 ***birthdays, finance***
 
-***The following codes are for educational purpose only and not intended to be used/submitted as your own solutions. 
-Cheating violates the Academic Honesty of the course, 
-it also totally defeats the point of learning programming especially for a free online course.***
-
 
 
 
